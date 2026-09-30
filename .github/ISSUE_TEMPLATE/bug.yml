@@ -1,0 +1,39 @@
+name: Something doesn't work
+description: A shortcut, the panel, an account or an update misbehaves.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "**Please don't paste private text.** Describe it, or reproduce with a made-up sample."
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what you expected
+      placeholder: "⌃⌥F in Notes: the text was replaced twice."
+    validations:
+      required: true
+  - type: input
+    id: app
+    attributes:
+      label: The app you were typing in
+      placeholder: "Notes, Safari (a Gmail message), Telegram…"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Text Helper version
+      description: Settings › About — click the version to copy it.
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+    validations:
+      required: true
+  - type: dropdown
+    id: account
+    attributes:
+      label: Account
+      options: [Claude, ChatGPT, Grok, Not relevant]
